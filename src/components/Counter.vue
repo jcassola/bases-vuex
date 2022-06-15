@@ -5,7 +5,11 @@
 
   <h1>mapState</h1>
   <h2>mapState: {{count}}</h2>
-  <h2>lastMutation: {{count}}</h2>
+  <h2>lastMutation: {{lastMutation}}</h2>
+
+  <button @click="increment">+1</button>
+  <button @click="incrementBy">+5</button>
+  <button>Random</button>
 </template>
 
 <script>
@@ -22,6 +26,14 @@ export default {
         //     count: state => state.count,
         //     lastMutation: state => state.lastMutation
         // })
+    },
+    methods: {
+        increment(){
+            this.$store.commit('increment')
+        },
+        incrementBy(){
+            this.$store.commit('incrementBy', 5)
+        }
     }
 }
 </script>
