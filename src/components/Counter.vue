@@ -1,7 +1,7 @@
 <template>
   <h1>Counter - Vuex</h1>
   <h2>Direct access: {{$store.state.count}} </h2>
-  <!-- <h2>Computed: {{countComputed}}</h2> -->
+  <h2>Computed: {{countComputed}}</h2>
 
 
   <button @click="increment">+1</button>
